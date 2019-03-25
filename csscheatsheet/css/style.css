@@ -1,10 +1,15 @@
+/**{
+	padding: 0;
+	margin: 0;
+}*/
+
+
 body{
 	background: #f4f4f4;
 	color: #555555;
 
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
-	font-weight: normal;
 
 	/* Same as above*/
 	font: normal 18px Arial, Helvetica, sans-serif;
@@ -12,14 +17,161 @@ body{
 	line-height: 1.6em;
 
 	margin: 0;
+	padding: 0
+}
+
+.clr{
+	clear: both;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover{
+	color: red;
+}
+
+a:active{
+	color: green;
 }
 
 .container {
-	width: 80%;
+	width: 90%;
 	margin: auto;
 }
 
 .box-1{
 	background-color: #333;
 	color: #fff;
+	padding: 25px 10px 10px 10px;
+	margin: 10px;
+	border: 10px #29E solid;
+}
+
+.box-1 h1{
+	font-family: Tahoma;
+	font-weight: normal;
+	text-decoration: underline;
+	letter-spacing: 0.2em;
+
+}
+
+.box-2{
+	border: 3px dotted #ccc;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.categories{
+	border: 1px #ccc solid;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+.categories h2{
+	text-align: center;
+}
+
+.categories ul{
+	padding: 0;
+	list-style: none;
+	padding-left: 20px;
+}
+
+.categories li{
+	padding-bottom: 8px;
+	border-bottom: dotted 1px #333;
+	list-style-image: url('../images/check.jpg')
+}
+
+
+.my-form{
+	padding: 20px;
+}
+
+.my-form .form-group{
+	padding-bottom: 15px;
+}
+
+.my-form label{
+	display: block;
+}
+
+.my-form input[type="text"], .my-form textarea{
+	padding: 8px;
+	width: 100%;
+}
+
+.button{
+	background-color: #333;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+}
+
+.block{
+	float: left;
+	width: 33.3%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#main-block{
+	float: left;
+	width: 70%;
+	box-sizing: border-box;
+}
+
+#sidebar{
+	float: right;
+	width: 30%;
+	background-color: #333;
+	color: white;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.p-box{
+	width: 800px;
+	height: 500px;
+	border: 1px solid black;
+	margin: 30px 0;
+	position: relative;
+}
+
+.p-box h1{
+	position: absolute;
+	top: 100px;
+	left: 200px;
+}
+
+.p-box h2{
+	position: absolute;
+	bottom: 40px;
+	right: 100px
+}
+
+.fix-me{
+	position: fixed;
+	top: 400px;
+	left: 0px;
+}
+
+.my-list li:first-child{
+	background: red;
+}
+
+.my-list li:last-child{
+	background: blue;
+}
+
+.my-list li:nth-child(5){
+	background: green;
+}
+
+.my-list li:nth-child(even){
+	background: gray;
 }
