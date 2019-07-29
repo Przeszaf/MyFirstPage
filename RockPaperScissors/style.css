@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+}
+
+.buttons {
+    margin: 100px auto;
+    width: 60%;
+}
+
+.buttons ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.buttons li {
+    display: inline-block;
+    width: 33.3%;
+}
+
+button {
+    width: 80%;
+}
+
+button:hover {
+    background-color: #cccccc;
+}
+
+button:active {
+    background-color: #aaaaaa;
+}
+
+p {
+    text-align: center;
+    margin: 10px;
+}

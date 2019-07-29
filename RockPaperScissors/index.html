@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+    <title>Rock, paper, scissors</title>
+</head>
+
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+
+    <div class="buttons">
+        <ul>
+            <li><button type="button" id="rock" onclick="buttonClicked(this.id)">Rock</button></li>
+            <li><button type="button" id="paper" onclick="buttonClicked(this.id)">Paper</button></li>
+            <li><button type="button" id="scissors" onclick="buttonClicked(this.id)">Scissors</button></li>
+        </ul>
+    </div>
+
+    <p id="computerLabel">Computer chose...</p>
+    <p id="resultLabel">You...</p>
+
+    <table>
+
+    </table>
+
+    <script>
+        function buttonClicked(name) {
+            let computerChoice = String(randomSign())
+            updateComputerLabel(name, computerChoice)
+            if (name == "scissors") {
+                switch (computerChoice) {
+                    case "scissors": 
+                    console.log("HERE")
+                    updateResultLabel("draw")
+                    break;
+                    case "rock": 
+                    updateResultLabel("lose")
+                    break;
+                    case "paper":
+                    updateResultLabel("win")
+                    break;
+                }
+            } else if (name == "rock") {
+                switch (computerChoice) {
+                    case "scissors": 
+                    updateResultLabel("win")
+                    break;
+                    case "rock": 
+                    updateResultLabel("draw")
+                    break;
+                    case "paper":
+                    updateResultLabel("lose")
+                    break;
+                }
+            } else if (name == "paper") {
+                switch (computerChoice) {
+                    case "scissors": 
+                    updateResultLabel("lose")
+                    break;
+                    case "rock": 
+                    updateResultLabel("win")
+                    break;
+                    case "paper":
+                    updateResultLabel("draw")
+                    break;
+                }
+            }
+        }
+
+        function randomSign() {
+            let num = Math.floor(Math.random() * 3)
+            switch (num) {
+                case 0:
+                return "paper"
+                case 1:
+                return "rock"
+                case 2: 
+                return "scissors"
+            }
+        }
+
+        function updateComputerLabel(playerSign, computerSign) {
+            let computerLabel = document.getElementById("computerLabel")
+            computerLabel.textContent = `Computer chose ${computerSign}. You chose ${playerSign}.`
+        }
+
+        function updateResultLabel(result) {
+            console.log(result)
+            let resultLabel = document.getElementById("resultLabel")
+            if (result.valueOf() == "win") {
+                resultLabel.textContent = "You won!"
+            } else if (result.valueOf() == "lose") {
+                resultLabel.textContent = "You lost!"
+            } else {
+                resultLabel.textContent = "Draw!"
+            }
+        }
+    </script>
+</body>
+
+</html>
